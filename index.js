@@ -68,4 +68,6 @@ app.post("/search", async (req, res) => {
 
 app.listen(port, () => {
     console.log("Corriendo servidor puerto", port);
+}).on("error", (err) => {
+    console.error("Error al iniciar el servidor:", err);
 });
